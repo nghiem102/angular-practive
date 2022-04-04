@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,11 @@ import { FooterComponent } from './components/client/footer/footer.component';
 import { HomepageComponent } from './pages/client/homepage/homepage.component';
 import { ProductsComponent } from './pages/client/products/products.component';
 import { DetailComponent } from './pages/client/detail/detail.component';
+import { CartComponent } from './pages/client/cart/cart.component';
+import { ProductService } from './services/product.service';
+import { SidebarComponent } from './components/admin/sidebar/sidebar.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ManagerComponent } from './pages/admin/manager/manager.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +26,18 @@ import { DetailComponent } from './pages/client/detail/detail.component';
     FooterComponent,
     HomepageComponent,
     ProductsComponent,
-    DetailComponent
+    DetailComponent,
+    CartComponent,
+    SidebarComponent,
+    DashboardComponent,
+    ManagerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

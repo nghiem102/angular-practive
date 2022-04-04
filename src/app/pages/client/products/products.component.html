@@ -8,10 +8,10 @@
                   Thương hiệu
               </h4>
               <ul>
-                  <li class="category-item-link"><a href="">Nike</a></li>
-                  <li class="category-item-link"><a href="">Jordan</a></li>
-                  <li class="category-item-link"><a href="">Adiddas</a></li>
-                  <li class="category-item-link"><a href="">MLB</a></li>
+                  <li class="category-item-link"><a href="">Iphone</a></li>
+                  <li class="category-item-link"><a href="">SamSung</a></li>
+                  <li class="category-item-link"><a href="">Nokia</a></li>
+                  <li class="category-item-link"><a href="">Xiaomi</a></li>
               </ul>
           </div>
       </div>
@@ -19,33 +19,18 @@
       <div class="content__main col l-9 m-12 c-12">
           <div class="conten-product row">
               <h2 class="conten__product-title l-12 m-12 c-12">Sản phẩm mới</h2>
-              <a routerLink="/detail" class="content__product-item l-4 col m-6 c-12">
+                <a
+                *ngFor="let product of products"
+                  [routerLink]="['/detail',product.id]" class="content__product-item l-4 col m-6 c-12">
                   <div class="product-item-img">
-                      <img src="./assets/css/img/giày 1.png" alt="">
+                      <img [src]="product.img" alt="">
                   </div>
                   <div class="product-item-text">
-                      <p class="product-item-name">Jordan Delta 2</p>
-                      <p class="product-item-price">3.200.000 đ</p>
+                      <p class="product-item-name">{{product.name}}</p>
+                      <p class="product-item-price">{{product.price.toLocaleString('vn-VN')}}</p>
                   </div>
-              </a>
-              <a href="" class="content__product-item l-4 col m-6 c-12">
-                  <div class="product-item-img">
-                      <img src="./assets/css/img/giày 2.png" alt="">
-                  </div>
-                  <div class="product-item-text">
-                      <p class="product-item-name">Nike Air Jordan XT</p>
-                      <p class="product-item-price">3.200.000 đ</p>
-                  </div>
-              </a>
-              <a href="" class="content__product-item l-4 col m-6 c-12">
-                  <div class="product-item-img">
-                      <img src="./assets/css/img/giày 3.png" alt="">
-                  </div>
-                  <div class="product-item-text">
-                      <p class="product-item-name">RS-X-INTL Game</p>
-                      <p class="product-item-price">3.200.000 đ</p>
-                  </div>
-              </a>
+                </a>
+
           </div>
       </div>
       <!-- end conten-product -->

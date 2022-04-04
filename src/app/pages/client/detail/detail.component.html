@@ -2,30 +2,18 @@
   <div class="detail grid wide row">
       <div class="detail__main l-8 m-12 c-12">
           <div class="main-text">
-              <p class="text-name">Jordan Delata 2</p>
-              <p class="text-price">3.200.000 đ</p>
+              <p class="text-name">{{product.name}}</p>
+              <p class="text-price">{{product.price.toLocaleString('vn-VN')}}</p>
           </div>
           <div class="main-img">
-              <img src="./assets/css/img/giày 5.png" alt="">
+              <img [src]="product.img" alt="">
           </div>
       </div>
       <div class="detail__content l-4 m-12 c-12">
           <div class="content-info">
               <h5 class="content-title">Chi tiết sản phẩm</h5>
-              <p class="info-text">Air Jordan là một thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách của Mỹ do Nike sản xuất . Được thành lập tại Chicago , Air Jordan được tạo ra cho Hall of Fame, cựu cầu thủ bóng rổ Michael Jordan trong thời gian thi đấu cho Chicago Bulls .</p>
+              <p class="info-text">{{product.desc}}</p>
 
-          </div>
-          <div class="content-choose">
-              <h5 class="choose-title">Chọn size</h5>
-              <div class="choose-btn">
-                  <button>37</button>
-                  <button>38</button>
-                  <button>39</button>
-                  <button>40</button>
-                  <button>41</button>
-                  <button>42</button>
-                  <button>43</button>
-              </div>
           </div>
           <div class="content-add">
               <div class="quantity">
@@ -46,29 +34,5 @@
       </div>
   </div>
   <!-- end detail -->
-  <div class="grid wide">
-      <div class="comment">
-          <h3 class="comment-title">Bình luận</h3>
-          <div class="comment-item">
-              <div class="comment-item-input">
-                  <div class="item-avatar">
-                      <img src="./assets/css/img/z2117188164312_f9cb98c660990112c0cac73b3201fa3b.jpg" alt="">
-                  </div>
-                  <form action="">
-                      <input type="text" name="" id="comment" placeholder="Thêm bình luận">
-                      <input type="submit" name="" id="btn-submit" value="Gửi">
-                  </form>
-              </div>
-              <div class="comment-output">
-                  <div class="item-avatar">
-                      <img src="./assets/css/img/z2117188164312_f9cb98c660990112c0cac73b3201fa3b.jpg" alt="">
-                  </div>
-                  <div class="comment-content">
-                      <h4 class="comment-user">Lê Đình Nghiêm</h4>
-                      <p class="comment-text">Sản phẩm rất tốt</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+
 </main>
