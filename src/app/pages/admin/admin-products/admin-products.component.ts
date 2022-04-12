@@ -20,6 +20,10 @@ export class AdminProductsComponent implements OnInit {
     })
   }
 
-  
+  onRemove(id :any): void {
+    this.ps.remove(id).subscribe(() => {
+      this.getProducts()
+    })
+  }
 
 }

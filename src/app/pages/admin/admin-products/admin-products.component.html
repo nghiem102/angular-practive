@@ -20,7 +20,7 @@
                   <td><img [src]='product.img' alt="" width='100px' /></td>
                   <td>{{product.price}}</td>
                   <td>
-                      <button class='btn-delete' >
+                      <button class='btn-delete' (click)="onRemove(product.id)">
                           <span class='text'>Delete</span>
                           <span class='icon'>
                               <i class='bx bx-x'></i>

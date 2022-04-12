@@ -17,4 +17,14 @@ export class ProductService {
   getProduct(id:any): Observable<any>{
     return this.http.get(`${apiURL}/${id}`)
   }
+
+  create(data: any): Observable<any> {
+    return this.http.post(apiURL, data)
+  }
+  remove(id:any): Observable<any>{
+    return this.http.delete(`${apiURL}/${id}`)
+  }
+  update(id:any , data:any): Observable<any>{
+    return this.http.put(`${apiURL}/${id}`, data)
+  }
 }
