@@ -16,6 +16,7 @@ import { ProductService } from './services/product.service';
 import { SidebarComponent } from './components/admin/sidebar/sidebar.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ManagerComponent } from './pages/admin/manager/manager.component';
+import { AdminProductsComponent } from './pages/admin/admin-products/admin-products.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ManagerComponent } from './pages/admin/manager/manager.component';
     CartComponent,
     SidebarComponent,
     DashboardComponent,
-    ManagerComponent
+    ManagerComponent,
+    AdminProductsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+
+  <div id='products'>
+      <button class='btn-add'>
+          <a routerLink="" class='add-link' >Add product</a>
+      </button>
+      <table class='product-table'>
+          <thead>
+              <tr>
+                  <th>STT</th>
+                  <th>Name</th>
+                  <th>Image</th>
+                  <th>Price</th>
+                  <th colSpan={2}>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of products" >
+                  <td>{{product.id}}</td>
+                  <td>{{product.name}}</td>
+                  <td><img [src]='product.img' alt="" width='100px' /></td>
+                  <td>{{product.price}}</td>
+                  <td>
+                      <button class='btn-delete' >
+                          <span class='text'>Delete</span>
+                          <span class='icon'>
+                              <i class='bx bx-x'></i>
+                          </span>
+                      </button>
+                  </td>
+                  <td>
+                      <button class='btn-edit'>
+                          <a routerLink="" class="btn-link" >Edit</a>
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
