@@ -1,0 +1,89 @@
+<div id="form">
+  <h1 *ngIf="id != undefined">Edit product {{ productDetail.name }}</h1>
+  <h1 *ngIf="id == undefined">Add Product</h1>
+
+  <form
+    [formGroup]="productForm"
+    class="form"
+    (ngSubmit)="OnSubmit(productForm.value)"
+  >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        class="form-control"
+        type="text"
+        name="name"
+        formControlName="name"
+        id="name"
+        [(ngModel)]="productDetail.name"
+      />
+    </div>
+    <app-show-validate
+      [formField]="productForm.get('name')"
+      key="Name"
+    ></app-show-validate>
+
+
+    <div class="form-group">
+      <label for="img">Image</label>
+      <input
+        class="form-control"
+        type="text"
+        name="img"
+        formControlName="img"
+        id="img"
+        [(ngModel)]="productDetail.img"
+      />
+    </div>
+    <app-show-validate
+      [formField]="productForm.get('img')"
+      key="Image"
+    ></app-show-validate>
+
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        class="form-control"
+        type="number"
+        name="price"
+        formControlName="price"
+        id="price"
+        [(ngModel)]="productDetail.price"
+      />
+    </div>
+    <app-show-validate
+      [formField]="productForm.get('price')"
+      key="Price"
+    ></app-show-validate>
+
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select name="status" id="status" formControlName="status">
+        <option value=1>Active</option>
+        <option value=0>None</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="desc">Desc</label>
+      <input
+        class="form-control"
+        type="text"
+        name="desc"
+        formControlName="desc"
+        id="desc"
+        [(ngModel)]="productDetail.desc"
+      />
+    </div>
+    <app-show-validate
+      [formField]="productForm.get('desc')"
+      key="Description"
+    ></app-show-validate>
+
+
+    <button class="btn btn-submit" [disabled]="productForm.invalid">Submit</button>
+  </form>
+  <button class="btn btn-cancel" (click)="onCancel()">Cancel</button>
+</div>

@@ -4,6 +4,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { WebsiteLayoutComponent } from './layouts/website-layout/website-layout.component';
 import { AdminProductsComponent } from './pages/admin/admin-products/admin-products.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { FormProductComponent } from './pages/admin/form-product/form-product.component';
 import { ManagerComponent } from './pages/admin/manager/manager.component';
 import { CartComponent } from './pages/client/cart/cart.component';
 import { DetailComponent } from './pages/client/detail/detail.component';
@@ -46,8 +47,16 @@ const routes: Routes = [
             component: ManagerComponent
           },
           {
-            path: 'products',
+            path: 'phones',
             component: AdminProductsComponent
+          },
+          {
+            path: 'phones/:id/edit',
+            component: FormProductComponent
+          },
+          {
+            path: 'phones/create',
+            component: FormProductComponent
           }
         ]
       }

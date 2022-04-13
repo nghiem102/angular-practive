@@ -1,0 +1,11 @@
+<div class="text-danger" *ngIf="formData?.dirty">
+  <p *ngIf="formData?.errors?.['required']">
+    {{key}} can't be empty
+  </p>
+  <p *ngIf="formData?.errors?.['minlength']">
+    {{key}} từ 6 kí tự
+  </p>
+  <p *ngIf="formData?.errors?.['email']">
+    {{key}} định dạng sai
+  </p>
+</div>

@@ -1,0 +1,14 @@
+.btn-active {
+  padding: 12px 20px;
+  background-color: rgb(20, 87, 244);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.btn-none {
+  padding: 12px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

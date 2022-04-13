@@ -1,3 +1,4 @@
+import { ShowValidateComponent } from './components/admin/show-validate/show-validate.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +18,9 @@ import { SidebarComponent } from './components/admin/sidebar/sidebar.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ManagerComponent } from './pages/admin/manager/manager.component';
 import { AdminProductsComponent } from './pages/admin/admin-products/admin-products.component';
+import { FormProductComponent } from './pages/admin/form-product/form-product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StatusComponent } from './components/admin/status/status.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +36,16 @@ import { AdminProductsComponent } from './pages/admin/admin-products/admin-produ
     SidebarComponent,
     DashboardComponent,
     ManagerComponent,
-    AdminProductsComponent
+    AdminProductsComponent,
+    FormProductComponent,
+    ShowValidateComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [ProductService],

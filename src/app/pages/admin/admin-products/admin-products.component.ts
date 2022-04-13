@@ -21,9 +21,26 @@ export class AdminProductsComponent implements OnInit {
   }
 
   onRemove(id :any): void {
-    this.ps.remove(id).subscribe(() => {
+
+    if(confirm('Are you want delete?')) {
+      this.ps.remove(id).subscribe(() => {
       this.getProducts()
     })
+    }
+
+  }
+
+  parebtChangeStatus(event:any, productId:number) {
+    const currentProduct = this.products.find((product:any) => product.id === productId)
+    if(currentProduct) {
+      this.ps.update(productId,
+        {
+          ...currentProduct,
+          status: event
+        }
+        ).subscribe()
+    }
+    this.getProducts()
   }
 
 }
